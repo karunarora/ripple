@@ -1,5 +1,14 @@
 var game;
 
+
+
+window.onload = function(){
+  var game = new Phaser.Game(360, 700, Phaser.CANVAS, '');
+  game.state.add("menu",menuState,true);
+  game.state.add("main",mainState);
+};
+
+
 var ballDistance = 120;
 var rotationSpeed = 4;
 var angleRange = [25, 155];
